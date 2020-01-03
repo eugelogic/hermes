@@ -4,7 +4,7 @@
   "description": "Hermes is a javascript app sending SMS with the aid of [Twilio](https://www.twilio.com/).",
   "main": "index.js",
   "scripts": {
-    "lambda-server": "netlify-lambda server functions",
+    "lambda-serve": "netlify-lambda serve functions",
     "lambda-build": "netlify-lambda build functions"
   },
   "repository": {

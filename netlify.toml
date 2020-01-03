@@ -1,2 +1,2 @@
 [build]
-    function = "lambda"
+    functions = "lambda"
