@@ -1,0 +1,24 @@
+{
+  "name": "hermes",
+  "version": "1.0.0",
+  "description": "Hermes is a javascript app sending SMS with the aid of [Twilio](https://www.twilio.com/).",
+  "main": "index.js",
+  "scripts": {
+    "lambda-server": "netlify-lambda server functions",
+    "lambda-build": "netlify-lambda build functions"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eugelogic/hermes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eugelogic/hermes/issues"
+  },
+  "homepage": "https://github.com/eugelogic/hermes#readme",
+  "dependencies": {
+    "netlify-lambda": "^1.6.3"
+  }
+}
