@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/eugelogic/hermes#readme",
   "dependencies": {
-    "netlify-lambda": "^1.6.3"
+    "netlify-lambda": "^1.6.3",
+    "twilio": "^3.39.1"
   }
 }
