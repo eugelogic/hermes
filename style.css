@@ -1,0 +1,31 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+p, li {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container--sm {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+    max-width: 680px;
+}
+
+.messages__list ul {
+    list-style-type: none;
+    background-color: #eee;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.messages__list ul li {
+    line-height: 2;
+}
+
+.message__label {
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}

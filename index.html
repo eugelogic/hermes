@@ -14,14 +14,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hermes</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300,400&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <h1>Hermes - Twilio App</h1>
-    <h2>Messages List</h2>
-    <p>List of SMS messages sent from your Twilio account.</p>
-    <div id="messages-list"></div>
+    <div class="container--sm">
+        <h1>Hermes - Twilio App</h1>
+        <h2>Messages List</h2>
+        <p>List of SMS messages sent from your Twilio account.</p>
+        <div id="messages-list" class="messages__list"></div>
+    </div>
 
     <script src="./list-messages.js"></script>
 
