@@ -1,6 +1,6 @@
 const fetchMessages = async () =>
                  // use http://localhost:9000/list-messages to test locally
-    await (await fetch('.netlify/functions/list-messages')).json();
+    await (await fetch('/.netlify/functions/list-messages')).json();
 
 fetchMessages().then(info => {
     messagesList = document.querySelector('#messages-list');
