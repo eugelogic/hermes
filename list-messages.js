@@ -1,8 +1,8 @@
 const fetchMessages = async () =>
     // code for local
-    await (await fetch('http://localhost:9000/list-messages')).json();
+    // await (await fetch('http://localhost:9000/list-messages')).json();
     // code for production
-    // await (await fetch('/.netlify/functions/list-messages')).json();
+    await (await fetch('/.netlify/functions/list-messages')).json();
 
 fetchMessages().then(info => {
     messagesList = document.querySelector('#messages-list');
@@ -11,7 +11,8 @@ fetchMessages().then(info => {
         const messageUl = document.createElement('ul');
 
         const sentItem = document.createElement('li');
-        sentItem.appendChild(document.createTextNode(message.dateSent));
+        const niceDate = new Date(message.dateSent);
+        sentItem.appendChild(document.createTextNode(niceDate));
         messageUl.appendChild(sentItem);
         sentItem.insertAdjacentText('afterbegin', 'Sent on: ');
 
