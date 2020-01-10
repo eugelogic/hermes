@@ -1,6 +1,8 @@
 const fetchMessages = async () =>
-                 // use http://localhost:9000/list-messages to test locally
-    await (await fetch('/.netlify/functions/list-messages')).json();
+    // code for local
+    await (await fetch('http://localhost:9000/list-messages')).json();
+    // code for production
+    // await (await fetch('/.netlify/functions/list-messages')).json();
 
 fetchMessages().then(info => {
     messagesList = document.querySelector('#messages-list');
@@ -19,13 +21,12 @@ fetchMessages().then(info => {
         bodyItem.insertAdjacentText('afterbegin', 'Body: ');
 
         const priceItem = document.createElement('li');
-        if (message.price == null) {
-            priceItem.appendChild(document.createTextNode('Cost: no charge.'));
+        if (message.price === null) {
+            priceItem.appendChild(document.createTextNode('Cost: no charge'));
             messageUl.appendChild(priceItem);
         }
         else {
-            const rowPrice = message.price;
-            const formattedPrice = rowPrice.substring(1);
+            const formattedPrice = message.price.substring(1);
             priceItem.appendChild(document.createTextNode(formattedPrice));
             messageUl.appendChild(priceItem);
             priceItem.insertAdjacentText('afterbegin', 'Cost: £');
@@ -37,8 +38,7 @@ fetchMessages().then(info => {
         statusItem.insertAdjacentText('afterbegin', 'Status: ');
 
         const recepientItem = document.createElement('li');
-        const rowRecepient = message.to;
-        const partlyConcealedRecepient = rowRecepient.substring(9);
+        const partlyConcealedRecepient = message.to.substring(9);
         recepientItem.appendChild(document.createTextNode(partlyConcealedRecepient));
         messageUl.appendChild(recepientItem);
         recepientItem.insertAdjacentText('afterbegin', 'Recepient number ending: ***')
