@@ -19,10 +19,8 @@ try {
     // if it was successful show success message
     if (response.status === 200) {
     document.querySelector('.successMsg').hidden = false;
-    setTimeout(document.querySelector('.successMsg').hidden = true, 5000);
     } else {
     document.querySelector('.errorMsg').hidden = false;
-    setTimeout(document.querySelector('.errorMsg').hidden = true, 5000);
     }
 } catch (e) {
     console.error(e);
