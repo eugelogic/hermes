@@ -18,9 +18,11 @@ try {
 
     // if it was successful show success message
     if (response.status === 200) {
-    document.querySelector('.successMsg').hidden = false;
+    // document.querySelector('.successMsg').hidden = false;
+    console.log('SMS Sent!');
     } else {
-    document.querySelector('.errorMsg').hidden = false;
+    // document.querySelector('.errorMsg').hidden = false;
+    console.log('Something went wrong :-/');
     }
 } catch (e) {
     console.error(e);
